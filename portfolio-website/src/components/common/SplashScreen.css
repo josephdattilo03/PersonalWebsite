@@ -1,0 +1,15 @@
+.center-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: opacity 1s ease-in-out;
+}
+
+.loadbar {
+    width: 1vw;
+    height: 1vw;
+    background: black;
+    display: inline-block;
+    position: relative;
+}

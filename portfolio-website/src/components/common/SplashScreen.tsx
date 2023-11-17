@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion } from 'framer-motion';
+import './SplashScreen.css'
 
 export default function SplashScreen() {
     const numberOfDivs = 40;
@@ -17,7 +18,7 @@ export default function SplashScreen() {
     const divs = Array.from({ length: numberOfDivs }, (_, index) => (
         <motion.div
             key={index}
-            className="m-1"
+            className="m-1 loadbar"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{
                 opacity: [1, 1, 1, 1, 1],
@@ -32,12 +33,11 @@ export default function SplashScreen() {
                 repeat: Infinity,
                 repeatDelay: 0.1
             }}
-            style={{ width: '1vw', height: '1vw', background: 'black', display: 'inline-block', position: 'relative' }}
         ></motion.div>
     ));
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', opacity, transition: 'opacity 1s ease-in-out' }}>
+        <div style={{ opacity }} className='center-frame'>
             {divs}
         </div>
     );
