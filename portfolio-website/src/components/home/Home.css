@@ -104,7 +104,7 @@ h1 {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: #627297;
 }
 
 input:focus+.slider {
@@ -124,4 +124,26 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.slider-container {
+    line-height: .8;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+}
+
+.media-container {
+    width: 35vw;
+    height: 10vw;
+    border-radius: 20px;
+
+}
+.icon-container {
+    width: 30vw;
+    height: 30vw;
+    display: flex;
 }
