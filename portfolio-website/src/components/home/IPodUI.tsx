@@ -1,11 +1,9 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 
-interface IPodUIProps {
-    menu: string
-}
 
-export default function IPodUI({menu} : IPodUIProps) {
+
+export default function IPodUI() {
     const text = 'Hi there! Welcome to my portfolio. To have a look around, press the center button below.'
     return (
         <div>{text.split('').map((letter, index) => {

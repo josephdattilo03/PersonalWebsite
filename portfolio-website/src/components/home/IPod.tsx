@@ -24,7 +24,7 @@ export default function IPod({darkMode, children}: IPodProps) {
             <g id="SVGRepo_iconCarrier">
                 <path style={{ fill: darkMode ? '#ffffe4' : '#a9bcbc' }} d="M44.997,58.006H13.01c-1.66,0-3.006-1.346-3.006-3.006V3.006C10.003,1.346,11.349,0,13.01,0h31.987 c1.66,0,3.006,1.346,3.006,3.006V55C48.003,56.66,46.657,58.006,44.997,58.006z" />
                 <circle style={{ fill: darkMode ? '#242d42' : '#FFFFFF' }} cx="29.003" cy="41.006" r="13" />
-                <circle onClick={() => {console.log('hello')}} style={{ fill: darkMode ? '#ffffe4' : '#B1B3B4' }} cx="29.003" cy="41.006" r="4" />
+                <circle onClick={() => {console.log('hello')}} style={{ fill: darkMode ? '#ffffe4' : '#B1B3B4' }} cx="29.003" cy="41.006" r="4" /> //TODO add controls
                 <g>
                     <path style={{ fill: darkMode ? '#858b97' : '#2b2b2b' }} d="M30.003,32.006h-2c-0.553,0-1,0.448-1,1s0.447,1,1,1h2c0.553,0,1-0.448,1-1 S30.556,32.006,30.003,32.006z" />
                     <path style={{ fill: darkMode ? '#858b97' : '#2b2b2b' }} d="M30.003,48.006h-2c-0.553,0-1,0.448-1,1s0.447,1,1,1h2c0.553,0,1-0.448,1-1 S30.556,48.006,30.003,48.006z" />
