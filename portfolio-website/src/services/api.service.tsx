@@ -57,7 +57,12 @@ class ApiService {
             return (res.substring(res.indexOf('/') + 1))
         } catch (error) {
             console.error('Error fetching data:', error);
+            return null
         }
+    }
+
+    async getRecentPost() {
+        
     }
 }
 
