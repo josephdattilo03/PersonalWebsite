@@ -1,3 +1,4 @@
+import { Octokit } from "@octokit/rest";
 
 interface Track {
     name: string;
@@ -19,7 +20,7 @@ class ApiService {
 
     async getRecentSong(): Promise<string | null> {
         const username = 'jadattilo'
-        const apiKey = 'e76b40dae6c89c2e389907c6674795e3'
+        const apiKey = import.meta.env.VITE_SPOTIFY_KEY
         try {
             const url: string = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`;
             const response: Response = await fetch(url);
@@ -37,6 +38,25 @@ class ApiService {
         } catch (error) {
             console.error('Error fetching data:', error);
             return null;
+        }
+    }
+
+    async getRecentWork(): Promise<string | null> {
+        try {
+            const octokit = new Octokit({
+                auth: import.meta.env.VITE_GITHUB_KEY
+            })
+
+            const events = await octokit.request('GET /users/josephdattilo03/events', {
+                username: 'USERNAME',
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            })
+            const res = events.data[0].repo.name
+            return (res.substring(res.indexOf('/') + 1))
+        } catch (error) {
+            console.error('Error fetching data:', error);
         }
     }
 }
