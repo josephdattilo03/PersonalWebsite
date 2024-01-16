@@ -1,16 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../components/home/Home'
+import AppsUI from '../components/home/AppsUI'
+import Skills from '../components/skills/Skills'
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' Component={Home}></Route>
-        <Route path='/work'></Route>
-        <Route path='/skills'></Route>
+        <Route path='/experience'></Route>
+        <Route path='/skills' Component={Skills}></Route>
         <Route path='/music'></Route>
-        <Route path='/about-me'></Route>
+        <Route path='/about'></Route>
+        <Route path='/apps-test' Component={AppsUI}></Route>
       </Routes>
     </BrowserRouter>
   )

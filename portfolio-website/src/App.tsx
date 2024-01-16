@@ -1,17 +1,16 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import Router from './routes/Router.js'
-import SplashScreen from './components/common/SplashScreen.js'
+import React from 'react';
+import Router from './routes/Router';
+import './App.css';
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {setLoading(false)}, 6000)
-  }, [])
+
+
 
   return (
-    loading ? <SplashScreen></SplashScreen> : <Router></Router>
-  )
+    <div>
+      <Router />
+    </div>
+  );
 }
 
-export default App
+export default App;

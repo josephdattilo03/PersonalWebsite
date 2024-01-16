@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "name": "Java",
+            "experience": 3
+        },
+        {
+            "name": "JavaScript",
+            "experience": 3
+        },
+        {
+            "name": "HTML",
+            "experience": 3
+        },
+        {
+            "name": "CSS",
+            "experience": 3
+        },
+        {
+            "name": "Python",
+            "experience": 3
+        },
+        {
+            "name": "SQL",
+            "experience": 2
+        },
+        {
+            "name": "OCaml",
+            "experience": 1
+        },
+        {
+            "name": "C",
+            "experience": 1
+        },
+        {
+            "name": "React",
+            "experience": 3
+        },
+        {
+            "name": "Django",
+            "experience": 2
+        },
+        {
+            "name": "Flask",
+            "experience": 3
+        },
+        {
+            "name": "React Native",
+            "experience": 2
+        },
+        {
+            "name": "NodeJs",
+            "experience": 2
+        },
+        {
+            "name": "Bootstrap",
+            "experience": 3
+        },
+        {
+            "name": "Tailwind",
+            "experience": 1
+        },
+        {
+            "name": "Git",
+            "experience": 3
+        },
+        {
+            "name": "Sqlite3",
+            "experience": 1
+        },
+        {
+            "name": "PostgreSQL",
+            "experience": 2
+        },
+        {
+            "name": "MongoDB",
+            "experience": 3
+        },
+        {
+            "name": "Linux/Unix",
+            "experience": 3
+        },
+        {
+            "name": "Pandas",
+            "experience": 1
+        },
+        {
+            "name": "Microsoft Azure",
+            "experience": 2
+        },
+        {
+            "name": "Figma",
+            "experience": 1
+        },
+        {
+            "name": "Notion",
+            "experience": 1
+        }
+    ]
+}

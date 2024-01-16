@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import './Apps.css'
 
 interface IPodUIProps {
     text: string;
@@ -18,6 +19,7 @@ export default function IPodUI({ text }: IPodUIProps) {
                 <motion.span
                     key={index}
                     style={{ color: 'white' }}
+                    className='terminal-text'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.05 * (index + 1), duration: 0 }}
