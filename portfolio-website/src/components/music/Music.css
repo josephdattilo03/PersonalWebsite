@@ -1,0 +1,25 @@
+.front-photo {
+    height: auto;
+    width: 20vw;
+}
+
+.title-container {
+    width: 30vw;
+    height: 30vw;
+    margin-top: 10vw;
+}
+
+.appearing-txt {
+    animation-name: appearingText;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearingText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

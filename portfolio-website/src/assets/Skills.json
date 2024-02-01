@@ -95,6 +95,10 @@
         {
             "name": "Notion",
             "experience": 1
+        },
+        {
+            "name": "C++",
+            "experience": 1
         }
     ]
 }

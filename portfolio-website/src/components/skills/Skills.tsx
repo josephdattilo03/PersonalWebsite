@@ -37,12 +37,12 @@ export default function Skills() {
                 </div>
                 <input onChange={(e) => { setSearch(e.target.value) }} type='text' className='searchbar' placeholder='Search skills...'></input>
                 <SkillMeter skill={skill} setSkill={setSkill} />
-                <div style={{ marginRight: "10%", marginLeft: "10%", marginTop: '5%', textAlign: 'center' }}>
+                <div style={{ marginRight: "10%", marginLeft: "10%", textAlign: 'center' }}>
                     {skillData.data
                         .filter(e => e.name.toLowerCase().includes(search.toLowerCase()))
                         .map(e => (
                             <div onClick={() => { setSkill(e) }} className='skill'>
-                                <p>{e.name}</p>
+                                <p style={{margin:'auto'}}>{e.name}</p>
                             </div>
                         ))}
                 </div>

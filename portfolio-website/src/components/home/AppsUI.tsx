@@ -58,7 +58,7 @@ export default function AppsUI() {
                     <img src={appArray[currElem].logo}></img>
                 </div>
             
-                <p style={{ fontSize: '.2vw',color: 'white' }} className='terminal-text'>{appArray[currElem].name}</p>
+                <p style={{ fontSize: '.15vw',color: 'white' }} className='terminal-text'>{appArray[currElem].name}</p>
             </div>
             <img onClick={handleDownArrow} style={{ width: "20%", height: "20%", transform: 'rotate(90deg)' }} src={up}></img>
         </div>
