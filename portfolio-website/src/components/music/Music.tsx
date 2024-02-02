@@ -26,12 +26,12 @@ export default function Music() {
         title: "Penn Jazz Combos",
         description: "I rehearse with the Penn jazz combos to produce a bi-yearly show. The shows are professionally recorded and can be found below.",
         button: "Recordings",
-        href: ""
+        href: "https://drive.google.com/drive/folders/1HBBHLCszk6rkNJkmrBYAnxuuwzx6JQFZ?usp=drive_link"
     },
     {
         imageUrl: cellophonyPhoto,
         title: "Cellophony",
-        description: "My final year of highschool I ran a student orchestrated concert benefiting the W.O. Smith School of Music. I played as the house drummer alongside my organizer role.",
+        description: "My final year of high school I ran a student orchestrated concert benefiting the W.O. Smith School of Music. I played as the house drummer alongside my organizer role.",
         button: "Recording",
         href: "https://www.youtube.com/watch?v=8lnm5vKPsM0"
     }
@@ -110,7 +110,7 @@ export default function Music() {
                     }}
                     className='d-flex flex-row flex-wrap justify-content-center'>
                     {musicExperience.map((element, index) => (
-                        <div key={index} className="card m-3" style={{ width: '18rem' }}>
+                        <div key={index} className="card m-3 bg-light" style={{ width: '18rem' }}>
                             <img className="card-img-top" src={element.imageUrl} alt={`Card image ${index}`} />
                             <div className="card-body">
                                 <h5 className="card-title">{element.title}</h5>

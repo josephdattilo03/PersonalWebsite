@@ -1,0 +1,35 @@
+.logo-img {
+    width: 300px;
+    height: 300px;
+}
+.exp-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5% 10% 5% 10%;
+    gap: 5%;
+    animation: button-down .5s forwards ease-in-out;
+
+}
+.exp-container:hover {
+    animation: button-up .5s forwards ease-in-out;
+}
+@keyframes button-up {
+    0% {
+
+    }
+    100% {
+        transform: translate(-.5vw, -.5vw);
+        box-shadow: 4px 4px 10px black;
+    }
+}
+
+@keyframes button-down {
+    0% {
+        box-shadow: 4px 4px 10px black;
+        transform: translate(-.5vw, -.5vw);
+    }
+    100% {
+
+    }
+}
