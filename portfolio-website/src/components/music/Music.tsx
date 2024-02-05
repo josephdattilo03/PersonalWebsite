@@ -40,7 +40,7 @@ export default function Music() {
 
     return (
         <div className='d-flex justify-content-center' style={{ backgroundColor: '#D7D9B1' }}>
-            
+
             <div className=' d-flex justify-content-center align-items-center flex-column m-3'>
                 <h1 style={{ color: '#2F4858', textAlign: 'center', fontWeight: 'bold' }} className='terminal-text'>
                     {greeting[0].split('').map((l, idx) => (
@@ -62,9 +62,9 @@ export default function Music() {
                         ease: 'easeInOut',
                     }}
                     className='p-5' style={{ backgroundColor: '#2F4858' }} >
-                        <IconButton onClick={() => { navigate('/') }} color='primary' style={{position: 'absolute', top: 15, left: 10}}>
+                    <IconButton onClick={() => { navigate('/') }} color='primary' style={{ position: 'absolute', top: 15, left: 10 }}>
                         <img style={{ width: '4vw', height: '4vw' }} src={home}></img>
-            </IconButton>
+                    </IconButton>
                     <motion.div
                         className='p-5' style={{ backgroundColor: '#6A3937' }}>
                         <motion.div

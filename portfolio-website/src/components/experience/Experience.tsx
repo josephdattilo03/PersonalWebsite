@@ -4,19 +4,32 @@ import pennappsLogo from '../../assets/pennapps.png'
 import devDepot from '../../assets/graph image thingy.svg'
 import assassinLogo from '../../assets/Syrian_Insignia-R2.webp'
 import stockLogo from '../../assets/Stock Movement.svg'
-import { motion } from 'framer-motion'
+import { IconButton } from '@mui/material'
 import './Experience.css'
+import { useNavigate } from 'react-router-dom'
+import home from '../../assets/homegreen.svg'
 
 export default function Experience() {
-    const fromRight = { opacity: 0, x: 100 }
-    const fromLeft = { opacity: 0, x: -100 }
+    const animatedTextExp = "Experience"
+    const animatedTextProj = "Projects"
+    const navigate = useNavigate()
+
     return (
         <div className='bg-light'>
-            <div>
-                <h1>Experience</h1>
+            <div className="fade-in-text text-center p-5 h1 m-0 d-flex justify-content-center align-items-center" style={{backgroundColor: '#073605', color: '#199515'}}>
+                <span>
+                <IconButton onClick={() => { navigate('/') }} color='primary'>
+                        <img style={{ width: '4vw', height: '4vw' }} src={home}></img>
+                    </IconButton>
+                </span>
+                <div className='mx-2'>
+                {animatedTextExp.split('').map((l, idx) => (
+                    <span key={idx} style={{ animationDelay: `${.5 + idx * 0.1}s` }}>{l}</span>
+                ))}
+                <span id='blink'>_</span>
+                </div>
             </div>
             <div>
-                <h2>Work</h2>
                 <div style={{ backgroundColor: "#76877D" }} className='exp-container'>
                     <div>
                         <h3 className='text-center'>Lead Developer</h3>
@@ -38,7 +51,12 @@ export default function Experience() {
                 </div>
             </div>
             <div>
-                <h2>Projects</h2>
+            <div className="fade-in-text text-center p-5 h1 m-0" style={{backgroundColor: '#073605', color: '#199515'}}>
+                {animatedTextProj.split('').map((l, idx) => (
+                    <span key={idx} style={{ animationDelay: `${.5 + idx * 0.1}s` }}>{l}</span>
+                ))}
+                <span id='blink'>_</span>
+            </div>
                 <div style={{ backgroundColor: "#DBA8AC" }} className='exp-container'>
                     <div>
                         <img className='logo-img' src={devDepot}></img>
