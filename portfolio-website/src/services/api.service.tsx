@@ -22,7 +22,7 @@ class ApiService {
         const username = 'jadattilo'
         const apiKey = import.meta.env.VITE_SPOTIFY_KEY
         try {
-            const url: string = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`;
+            const url: string = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`;
             const response: Response = await fetch(url);
 
             if (!response.ok) {
