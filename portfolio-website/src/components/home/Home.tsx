@@ -38,7 +38,7 @@ export default function Home() {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLoading(false);
-        }, 6000);
+        }, 3000);
         fetchData();
         return () => {
             clearTimeout(timeoutId)

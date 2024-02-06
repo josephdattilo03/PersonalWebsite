@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import drums from '../../assets/drums.svg'
 import skills from '../../assets/skills.svg'
 import work from '../../assets/work.svg'
@@ -6,9 +6,12 @@ import about from '../../assets/about.svg'
 import up from '../../assets/up.svg'
 import './Apps.css'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
 
-export default function AppsUI() {
+interface AppsUIInterface {
+    setCurrLink: (value: string) => void
+}
+
+export default function AppsUI({setCurrLink} : AppsUIInterface) {
     const [currElem, setCurrElem] = useState(0)
     const navigate = useNavigate()
     const appArray = [
@@ -31,20 +34,22 @@ export default function AppsUI() {
             logo: drums
         },
         {
-            name: 'About',
-            route: '/about',
+            name: 'Contact',
+            route: '/contact',
             color: 'green',
             logo: about
         }
     ]
 
+    useEffect(() => {
+        setCurrLink(appArray[currElem].route)
+    }, [currElem]) 
+
     function handleUpArrow() {
         setCurrElem((currElem + 1) % appArray.length)
-        console.log(currElem)
     }
     function handleDownArrow() {
         setCurrElem(currElem - 1)
-        console.log(currElem)
         if (currElem == 0) {
             setCurrElem(appArray.length - 1)
         }
@@ -58,7 +63,7 @@ export default function AppsUI() {
                     <img src={appArray[currElem].logo}></img>
                 </div>
             
-                <p style={{ fontSize: '.15vw',color: 'white' }} className='terminal-text'>{appArray[currElem].name}</p>
+                <p style={{ fontSize: 3,color: 'white' }} className='terminal-text'>{appArray[currElem].name}</p>
             </div>
             <img onClick={handleDownArrow} style={{ width: "20%", height: "20%", transform: 'rotate(90deg)' }} src={up}></img>
         </div>

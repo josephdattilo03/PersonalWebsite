@@ -18,7 +18,7 @@ export default function Skills() {
     const [search, setSearch] = useState('')
     const navigate = useNavigate()
     return (
-        <div>
+        <div className='skills'>
             <motion.div
 
                 initial={{ y: -30, opacity: 0 }}

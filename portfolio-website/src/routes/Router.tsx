@@ -5,7 +5,7 @@ import AppsUI from '../components/home/AppsUI'
 import Skills from '../components/skills/Skills'
 import Music from '../components/music/Music'
 import Experience from '../components/experience/Experience'
-import About from '../components/about/About'
+import About from '../components/contact/Contact'
 
 export default function Router() {
   return (
@@ -15,8 +15,7 @@ export default function Router() {
         <Route path='/experience' Component={Experience}></Route>
         <Route path='/skills' Component={Skills}></Route>
         <Route path='/music' Component={Music}></Route>
-        <Route path='/about' Component={About}></Route>
-        <Route path='/apps-test' Component={AppsUI}></Route>
+        <Route path='/contact' Component={About}></Route>
       </Routes>
     </BrowserRouter>
   )

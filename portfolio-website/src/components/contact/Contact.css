@@ -1,0 +1,16 @@
+.gmail-svg {
+
+}
+
+.gmail-svg:hover {
+    animation: hoverUp .5s forwards ease-in-out;
+}
+
+@keyframes hoverUp {
+    0% {
+
+    }
+    100% {
+        transform: translateY(-50vw);
+    }
+}

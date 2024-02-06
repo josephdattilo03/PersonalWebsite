@@ -14,8 +14,12 @@ export default function Experience() {
     const animatedTextProj = "Projects"
     const navigate = useNavigate()
 
+    function changeUrl(url : string) {
+        window.location.href = url
+    }
+
     return (
-        <div className='bg-light'>
+        <div className='bg-light experience'>
             <div className="fade-in-text text-center p-5 h1 m-0 d-flex justify-content-center align-items-center" style={{backgroundColor: '#073605', color: '#199515'}}>
                 <span>
                 <IconButton onClick={() => { navigate('/') }} color='primary'>
@@ -30,7 +34,7 @@ export default function Experience() {
                 </div>
             </div>
             <div>
-                <div style={{ backgroundColor: "#76877D" }} className='exp-container'>
+                <div onClick={() => {changeUrl("https://www.karpool.tech/")}} style={{ backgroundColor: "#76877D" }} className='exp-container'>
                     <div>
                         <h3 className='text-center'>Lead Developer</h3>
                         <img src={karpoolLogo}></img>
@@ -39,14 +43,13 @@ export default function Experience() {
                         <p>Starting as an intern at Karpool, I implemented several features for their MVP including real time tracking, geocoding, database interaction, and UX/UI. Through excellent communication and teamwork, our team of 6 finished 50% of the MVP within a month. After my internship, I was contracted to continue work with Karpool. My main responsibilities have been an application refactor, as well as building the messaging functionality.</p>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#3A2E39" }} className='exp-container text-light'>
+                <div onClick={() => {changeUrl("https://pennapps.com/")}} style={{ backgroundColor: "#3A2E39" }} className='exp-container text-light'>
                     <div>
                         <p>As a backend developer for PennApps, my main responsibilities have encompassed developing the application portal backend and creating a slack bot to manage the hackathon's slack. This year, I have been appointed the backend team lead where I will be heading the innovation of new technology to benefit the hackers.</p>
                     </div>
                     <div>
                         <h3 className='text-center'>Team Lead</h3>
                         <img src={pennappsLogo}></img>
-
                     </div>
                 </div>
             </div>
@@ -57,7 +60,7 @@ export default function Experience() {
                 ))}
                 <span id='blink'>_</span>
             </div>
-                <div style={{ backgroundColor: "#DBA8AC" }} className='exp-container'>
+                <div onClick={() => changeUrl("https://github.com/josephdattilo03?tab=repositories&q=devdepot&type=&language=&sort=")} style={{ backgroundColor: "#DBA8AC" }} className='exp-container'>
                     <div>
                         <img className='logo-img' src={devDepot}></img>
                     </div>
@@ -65,16 +68,15 @@ export default function Experience() {
                         <p>DevDepo is a MERN stack web application that seeks to connect student developers to work on projects together. Features in development include, user creation/authentication, project creation/permissions/invitations, shared task management, progress and analytics, dynamic calender, live chat, UX/UI, and github compatibility.</p>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#ECFEE8" }} className='exp-container'>
-
+                <div onClick={() => changeUrl("https://github.com/josephdattilo03/Assassin")} style={{ backgroundColor: "#ECFEE8" }} className='exp-container'>
                     <div>
-                        <p>Assassin is a Flask web application that organizes games of <a href='https://en.wikipedia.org/wiki/Assassin_(game)'>assassin</a>. The idea for this project was inspired by my desire to automate a process that I watched my class officers take hours to complete. Features include user creation/authentication, game creation/permissions/invitations, UX/UI, and game management/tracking.</p>
+                        <p>Assassin is a Flask web application that organizes games of <a style={{textDecoration: 'none'}} href='https://en.wikipedia.org/wiki/Assassin_(game)'>assassin</a>. The idea for this project was inspired by my desire to automate a process that I watched my class officers take hours to complete. Features include user creation/authentication, game creation/permissions/invitations, UX/UI, and game management/tracking.</p>
                     </div>
                     <div>
                         <img className='logo-img' src={assassinLogo}></img>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#F6AE2D" }} className='exp-container'>
+                <div onClick={() => {changeUrl("https://colab.research.google.com/drive/1-fCwlLfJr8Sb3aB-hNR3c9oKVF0RqLCk?usp=sharing")}} style={{ backgroundColor: "#F6AE2D" }} className='exp-container'>
                     <div>
                         <img src={stockLogo} className='logo-img'></img>
                     </div>
