@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import introphoto from '../../assets/introphoto.jpeg'
 import resume from '../../assets/Joseph Dattilo 2024 (3).pdf'
 import { motion } from 'framer-motion'

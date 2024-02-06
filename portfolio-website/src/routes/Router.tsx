@@ -1,7 +1,6 @@
-import React from 'react'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../components/home/Home'
-import AppsUI from '../components/home/AppsUI'
 import Skills from '../components/skills/Skills'
 import Music from '../components/music/Music'
 import Experience from '../components/experience/Experience'

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import karpoolLogo from '../../assets/cdn.lugc-1.avif'
 import pennappsLogo from '../../assets/pennapps.png'
 import devDepot from '../../assets/graph image thingy.svg'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import drums from '../../assets/drums.svg'
 import skills from '../../assets/skills.svg'
 import work from '../../assets/work.svg'

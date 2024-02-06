@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction, useState } from 'react'
+import { Dispatch, ReactNode, SetStateAction, useState } from 'react'
 import AppsUI from './AppsUI'
 import { useNavigate } from 'react-router-dom'
 
@@ -41,7 +41,7 @@ export default function IPod({ darkMode, children, showUI, setShowUI }: IPodProp
 
                 <rect x="15.003" y="5.006" style={{ fill: '#000000' }} width="28" height="19" />
                 {showUI ? <foreignObject x="16.5" y="7" width="28" height="19">
-                    <AppsUI currLink={currLink} setCurrLink={setCurrLink}></AppsUI>
+                    <AppsUI setCurrLink={setCurrLink}></AppsUI>
                 </foreignObject> : <foreignObject x="15.003" y="5.006" width="28" height="19">
                     <div style={{ fontSize: '2px', padding: 2 }}>
                         {children}

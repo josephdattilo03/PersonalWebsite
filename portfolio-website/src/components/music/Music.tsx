@@ -1,4 +1,4 @@
-import React from 'react'
+
 import frontPhoto from '../../assets/Elmo Kickoff (1).jpeg'
 import './Music.css'
 import { motion } from 'framer-motion'
