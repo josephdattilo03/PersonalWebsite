@@ -26,7 +26,7 @@ class ApiService {
             const response: Response = await fetch(url);
 
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                return null;
             }
             
             const data: RecentTracksResponse = await response.json();
