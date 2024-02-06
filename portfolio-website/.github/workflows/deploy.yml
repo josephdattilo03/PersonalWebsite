@@ -49,5 +49,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }},
           VITE_GITHUB_KEY: ${{secrets.VITE_GITHUB_KEY}},
-          VITE_SPOTIFY_KEY: ${{secrets.VITE_SPOTIFY_KEY}}
+          VITE_SPOTIFY_KEY: ${{secrets.VITE_SPOTIFY_KEY}},
           publish_dir: ./dist
