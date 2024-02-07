@@ -26,18 +26,18 @@ class ApiService {
             const response: Response = await fetch(url);
 
             if (!response.ok) {
-                return null;
+                return "can't be found";
             }
             
             const data: RecentTracksResponse = await response.json();
             if (data.recenttracks && data.recenttracks.track.length > 0) {
                 return `${data.recenttracks.track[0].name} by ${data.recenttracks.track[0].artist['#text']}`;
             } else {
-                return null;
+                return "cant be found";
             }
         } catch (error) {
             console.error('Error fetching data:', error);
-            return null;
+            return "cant be found";
         }
     }
 
