@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import arrow from '../../assets/up_black.svg'
 import skills from '../../assets/skills.svg'
 import work from '../../assets/work.svg'
