@@ -6,7 +6,11 @@ import Music from '../components/music/Music'
 import Experience from '../components/experience/Experience'
 import About from '../components/contact/Contact'
 
+
 export default function Router() {
+
+
+
   return (
     <BrowserRouter>
       <Routes>

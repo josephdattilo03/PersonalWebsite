@@ -9,6 +9,7 @@ import IPodUI from './IPodUI';
 
 
 import './Home.css'
+import SafariAppsUI from './SafariAppsUI';
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [IPodText, setIPodText] = useState('Hi there! Welcome to my portfolio. To have a look around, press the center button below.')
     const [showUI, setShowUI] = useState(false)
+    const [isSafariBool, setIsSafariBool] = useState(false)
 
     
 
@@ -40,10 +42,16 @@ export default function Home() {
             setLoading(false);
         }, 3000);
         fetchData();
+        isSafari()
         return () => {
             clearTimeout(timeoutId)
         }
     }, []);
+
+    function isSafari() {
+        const userAgent = navigator.userAgent;
+        setIsSafariBool(userAgent.indexOf('Safari') != -1 && userAgent.indexOf('Chrome') == -1)
+    }
 
 
 
@@ -73,9 +81,15 @@ export default function Home() {
                     className='row'
                 >
                     <div className='col-6'>
-                        <IPod showUI={showUI} setShowUI={setShowUI} darkMode={darkMode}>
+                        {
+                            (showUI && isSafariBool) ? 
+                            <SafariAppsUI></SafariAppsUI>
+                            : 
+                            <IPod showUI={showUI} setShowUI={setShowUI} darkMode={darkMode}>
                             <IPodUI text={IPodText}></IPodUI>
                         </IPod>
+                        }
+                        
                     </div>
                     <div className='col-6 d-flex justify-content-center align-items-center'>
                         <div>
