@@ -15,7 +15,6 @@ import SafariAppsUI from './SafariAppsUI';
 export default function Home() {
     const menuText = 'Hi there! Welcome to my portfolio. To have a look around, press the center button below.'
     const [darkMode, setDarkMode] = useState(false);
-    const [currSong, setCurrSong] = useState<string | null>(null);
     const [currWork, setCurrWork] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
     const [IPodText, setIPodText] = useState('Hi there! Welcome to my portfolio. To have a look around, press the center button below.')
@@ -27,9 +26,7 @@ export default function Home() {
     async function fetchData() {
 
         try {
-            const mostRecentSong = await APIService.getRecentSong();
             const mostRecentWork = await APIService.getRecentWork();
-            setCurrSong(mostRecentSong);
             setCurrWork(mostRecentWork)
         } catch (error) {
             console.error('Error fetching data:', error);
