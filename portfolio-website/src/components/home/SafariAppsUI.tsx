@@ -5,7 +5,13 @@ import work from '../../assets/work.svg'
 import drums from '../../assets/drums.svg'
 import about from '../../assets/about.svg'
 import { useNavigate } from 'react-router-dom'
-export default function SafariAppsUI() {
+
+interface SafariAppsUIInterface {
+    darkMode: boolean 
+}
+
+
+export default function SafariAppsUI({darkMode} : SafariAppsUIInterface) {
     const [currElem, setCurrElem] = useState(0)
     const navigate = useNavigate()
     const appArray = [
@@ -52,7 +58,7 @@ export default function SafariAppsUI() {
                 <img onClick={() => {handleDownArrow()}} style={{transform: 'rotate(-90deg)', width: '6vw', height: '6vw'}} src={arrow}></img>
                     <div onClick={() => {navigate(appArray[currElem].route)}} style={{backgroundColor: appArray[currElem].color, width: '30vw', height: '30vw', borderRadius: 30}}>
                         <img src={appArray[currElem].logo}></img>
-                        <h1 style={{fontSize: '5vw'}} className='text-center text-dark'>{appArray[currElem].name}</h1>
+                        <h1 style={{fontSize: '5vw', color: darkMode ? "#ffffe4" : "#343d52"}} className='text-center'>{appArray[currElem].name}</h1>
                     </div>
                 <img onClick={() => {handleUpArrow()}} style={{transform: 'rotate(90deg)', width: '6vw', height: '6vw'}} src={arrow}></img>
             </div>
