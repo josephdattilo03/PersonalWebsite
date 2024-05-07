@@ -1,4 +1,4 @@
-import React from 'react'
+
 import resume from '../../assets/Joseph Dattilo 2024 (9).pdf'
 import { useNavigate } from 'react-router-dom'
 
