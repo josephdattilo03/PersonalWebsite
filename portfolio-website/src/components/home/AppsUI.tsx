@@ -4,6 +4,7 @@ import skills from '../../assets/skills.svg'
 import work from '../../assets/work.svg'
 import about from '../../assets/about.svg'
 import up from '../../assets/up.svg'
+import resume from '../../assets/resume-4-svgrepo-com.svg'
 import './Apps.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -38,6 +39,12 @@ export default function AppsUI({setCurrLink} : AppsUIInterface) {
             route: '/contact',
             color: 'green',
             logo: about
+        },
+        {
+            name: 'Resume',
+            route: '/resume',
+            color: 'white',
+            logo: resume
         }
     ]
 
